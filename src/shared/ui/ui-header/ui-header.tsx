@@ -17,10 +17,10 @@ export function UiHeader({
     <header
       className={clsx(
         className,
-        "px-4 py-5 border-b border-b-slate-400 flex justify-between items-center cursor-pointer",
+        "px-3 py-4 border-b border-b-slate-400 flex justify-between items-center cursor-pointer bg-white",
       )}
     >
-      <UiLogo logoContent={logoContent} className="text-teal-600" />
+      <UiLogo logoContent={logoContent} className="text-teal-600"/>
       {rightContent}
     </header>
   );
