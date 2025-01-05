@@ -35,11 +35,11 @@ export function UiSelectField({
         id={id}
         className={clsx(
           selectProps?.className,
-          "rounded  border border-slate-300 focus:border-teal-700 h-10 outline-none p-2",
+          "rounded border-[2px] border-slate-300 focus:border-teal-500 h-10 outline-none p-2 cursor-pointer",
         )}
       >
         {options?.map((option, index) => (
-          <option key={index} value={option.value} >
+          <option key={index} value={option.value}>
             {option.label}
           </option>
         ))}

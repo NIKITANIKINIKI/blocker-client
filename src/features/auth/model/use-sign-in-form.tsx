@@ -10,6 +10,7 @@ export function useSignInForm(){
         register,
         handleSubmit,
         formState: { errors },
+        watch
       } = useForm<{
         email: string;
         password: string;
@@ -31,6 +32,7 @@ export function useSignInForm(){
         signInMutation, 
         register,
         handleSubmit: handleSubmit((data) => signInMutation.mutate(data)),
-        errors
+        errors,
+        watch
     }
 }

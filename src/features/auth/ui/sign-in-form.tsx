@@ -5,7 +5,8 @@ import { UiLink } from "@/shared/ui";
 import { ROUTES } from "@/shared/constants/routes";
 
 export function SignInForm() {
-  const { signInMutation, handleSubmit, errors, register } = useSignInForm();
+  const { signInMutation, handleSubmit, errors, register } =
+    useSignInForm();
 
   return (
     <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
@@ -48,7 +49,7 @@ export function SignInForm() {
         Sign In
       </UiButton>
       <UiLink className="text-center" href={ROUTES.SIGN_UP}>
-      Not registered yet?
+        Not registered yet?
       </UiLink>
     </form>
   );

@@ -1,4 +1,4 @@
-import { useSessionQuery } from "@/entities/session/queries";
+import { useSessionQuery } from "@/entities/session";
 import { ROUTES } from "@/shared/constants/routes";
 import { UiPageSpinner } from "@/shared/ui";
 import { useRouter } from "next/router";
@@ -15,7 +15,10 @@ export function protectedPage<P>(Component: (props: P) => ReactElement) {
     }
 
     if (isError) {
-      router.replace(ROUTES.SIGN_IN);
+      if (router.pathname !== ROUTES.SIGN_IN) {
+        router.replace(ROUTES.SIGN_IN);
+      }
+     return null;
     }
 
     return <Component {...props} />;
